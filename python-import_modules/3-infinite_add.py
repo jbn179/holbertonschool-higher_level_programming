@@ -6,8 +6,10 @@ def main():
     """
     Calculate and print the sum of all command-line arguments.
 
-    The output should be the result of the addition of all arguments, followed by a new line.
-    You can cast arguments into integers by using int() (you can assume that all arguments can be casted into integers).
+    The output should be the result of the addition of all arguments,
+    followed by a new line.
+    You can cast arguments into integers by using int()
+    (you can assume that all arguments can be casted into integers).
     """
     total = 0
 
