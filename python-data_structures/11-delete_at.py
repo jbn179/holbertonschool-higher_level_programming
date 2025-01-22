@@ -9,7 +9,8 @@ def delete_at(my_list=[], idx=0):
     idx (int): The index of the element to delete.
 
     Returns:
-    list: The modified list with the element deleted. If the index is invalid, returns the original list.
+    list: The modified list with the element deleted.
+    If the index is invalid, returns the original list.
     """
     if idx < 0 or idx >= len(my_list):
         return my_list
