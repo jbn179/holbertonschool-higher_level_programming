@@ -10,7 +10,8 @@ def list_division(my_list_1, my_list_2, list_length):
     list_length (int): The number of elements to divide.
 
     Returns:
-    list: A new list containing the results of the division. If an error occurs, the result is 0.
+    list: A new list containing the results of the division.
+    If an error occurs, the result is 0.
     """
     new_list = []
     for i in range(list_length):
