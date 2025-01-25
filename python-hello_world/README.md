@@ -114,4 +114,4 @@ python3 9-easter_egg.py
 This project is under the MIT License.
 
 ## Author
-• Benjamin Ristord - [@jbn179](https://github.com/jbn179)
+Benjamin Ristord - [@jbn179](https://github.com/jbn179)

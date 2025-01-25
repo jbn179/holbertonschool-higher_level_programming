@@ -177,4 +177,4 @@ print(a, b)
 This project is under the MIT License.
 
 ## Author
-• Benjamin Ristord - [@jbn179](https://github.com/jbn179)
+Benjamin Ristord - [@jbn179](https://github.com/jbn179)
