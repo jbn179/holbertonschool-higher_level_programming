@@ -4,7 +4,16 @@
 ![Tests](https://img.shields.io/badge/Tests-passing-brightgreen.svg)
 
 ## 📖 Description
-This repository demonstrates Python Test-Driven Development (TDD) practices.
+This repository demonstrates Python Test-Driven Development (TDD) practices. TDD is a software development process where tests are written before the code itself. This approach ensures that the code is thoroughly tested and meets the specified requirements. Each script in this repository is accompanied by tests that validate its functionality.
+
+The scripts cover a range of topics, including:
+- Basic arithmetic operations
+- Matrix manipulation
+- String formatting and printing
+- Handling exceptions
+- Writing and running unittests
+
+These examples are intended to be simple and easy to understand, making them ideal for new programmers who are just starting out with Python and TDD.
 
 ## 📂 Contents
 - **0-add_integer.py**, tests/0-add_integer.txt  
