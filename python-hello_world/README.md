@@ -110,7 +110,8 @@ python3 9-easter_egg.py
 ```
 
 ## License
-MIT License
+![License](https://img.shields.io/badge/License-MIT-green.svg)  
+This project is under the MIT License.
 
 ## Author
 • Benjamin Ristord - [@jbn179](https://github.com/jbn179)
