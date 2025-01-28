@@ -1,1 +1,1 @@
-README à remplir une fois le projet terminé oui oui
+README à remplir une fois le projet terminé
