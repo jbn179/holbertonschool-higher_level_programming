@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
 ![Progress](https://img.shields.io/badge/Progress-Intermediate-yellow.svg)
 
-## 📖 Description
+## 📖 Description 
 This repository contains Python scripts and programs that demonstrate the use of classes and object-oriented programming (OOP) concepts. The goal is to provide a comprehensive understanding of how to define and use classes in Python, including attributes, methods, and encapsulation. Each script is designed to be simple and easy to understand, making them ideal for learners who are looking to deepen their knowledge of Python OOP.
 
 The projects cover a range of topics, including:
