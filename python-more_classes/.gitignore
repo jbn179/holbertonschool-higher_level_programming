@@ -1,7 +1,0 @@
-# Fichiers Python à exclure
-base.py
-
-# Fichiers système
-.DS_Store
-__pycache__/
-*.pyc
