@@ -1,2 +1,7 @@
-git.py
-main.py
+# Fichiers Python à exclure
+base.py
+
+# Fichiers système
+.DS_Store
+__pycache__/
+*.pyc
