@@ -87,7 +87,7 @@ class Rectangle:
         """Return string representation of the rectangle with #."""
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join(["#" * self.width] * self.height)
+        return "\n".join([str(self.print_symbol) * self.width] * self.height)
 
     def __repr__(self):
         """Return a string representation of the rectangle
