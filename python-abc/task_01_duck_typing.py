@@ -12,6 +12,7 @@ class Shape(ABC):
     Abstract base class for shapes.
     Defines methods that any shape must implement.
     """
+    
     @abstractmethod
     def area(self):
         """
@@ -31,6 +32,7 @@ class Circle(Shape):
     """
     Represents a circle defined by its radius.
     """
+
     def __init__(self, radius):
         """
         Initialize the circle with a specific radius.
@@ -57,6 +59,7 @@ class Rectangle(Shape):
     """
     Represents a rectangle defined by its width and height.
     """
+
     def __init__(self, width, height):
         """
         Initialize the rectangle with a specific width and height.
