@@ -14,6 +14,11 @@ class Shape(ABC):
     """
     
     @abstractmethod
+    def __init__(self):
+        """Initialization method for shapes."""
+        pass
+    
+    @abstractmethod
     def area(self):
         """
         Compute the shape's area.
