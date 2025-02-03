@@ -39,7 +39,7 @@ class Circle(Shape):
     Represents a circle defined by its radius.
     """
 
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """
         Initialize the circle with a specific radius.
 
@@ -66,7 +66,7 @@ class Rectangle(Shape):
     Represents a rectangle defined by its width and height.
     """
 
-    def __init__(self, width, height):
+    def __init__(self, width=0, height=0):
         """
         Initialize the rectangle with a specific width and height.
 
