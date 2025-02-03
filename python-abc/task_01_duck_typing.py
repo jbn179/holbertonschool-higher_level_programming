@@ -3,9 +3,9 @@
 This module defines an abstract base class for shapes and provides
 concrete implementations (Circle, Rectangle).
 """
-
 from abc import ABC, abstractmethod
 import math
+
 
 class Shape(ABC):
     """
@@ -25,6 +25,7 @@ class Shape(ABC):
         Compute the shape's perimeter.
         """
         pass
+
 
 class Circle(Shape):
     """
@@ -50,6 +51,7 @@ class Circle(Shape):
         Calculate the circle's perimeter using 2πr.
         """
         return 2 * math.pi * self.radius
+
 
 class Rectangle(Shape):
     """
@@ -78,12 +80,14 @@ class Rectangle(Shape):
         """
         return 2 * (self.width + self.height)
 
+
 def shape_info(shape):
     """
     Print the area and perimeter of a shape.
 
     Args:
-        shape (Shape): An instance of a class that implements the Shape interface.
+        shape (Shape): An instance of a class that implements
+        the Shape interface.
     """
     print(f"Area: {shape.area()}")
     print(f"Perimeter: {shape.perimeter()}")
