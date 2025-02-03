@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 This module demonstrates duck typing by implementing a Shape interface
 with concrete Circle and Rectangle classes and a shape_info function
