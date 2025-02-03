@@ -1,9 +1,3 @@
-#!/usr/bin/python3
-"""
-This module defines an abstract base class for shapes, provides
-concrete implementations (Circle, Rectangle), and a function
-to display shape information.
-"""
 from abc import ABC, abstractmethod
 import math
 
