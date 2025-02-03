@@ -9,11 +9,6 @@ class Shape(ABC):
     """
 
     @abstractmethod
-    def __init__(self):
-        """Initialization method for shapes."""
-        pass
-
-    @abstractmethod
     def area(self):
         """
         Compute the shape's area.
@@ -33,7 +28,7 @@ class Circle(Shape):
     Represents a circle defined by its radius.
     """
 
-    def __init__(self, radius=0):
+    def __init__(self, radius):
         """
         Initialize the circle with a specific radius.
 
@@ -60,7 +55,7 @@ class Rectangle(Shape):
     Represents a rectangle defined by its width and height.
     """
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height):
         """
         Initialize the rectangle with a specific width and height.
 
