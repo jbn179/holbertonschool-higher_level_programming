@@ -31,3 +31,53 @@ Test integer validator with negative value:
     >>> bg.integer_validator("distance", -4)
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
+
+Test integer validator with float:
+    >>> bg.integer_validator("number", 7.8)
+    Traceback (most recent call last):
+    TypeError: number must be an integer
+
+Test integer validator with None:
+    >>> bg.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+Test integer validator with bool:
+    >>> bg.integer_validator("valid", True)
+    Traceback (most recent call last):
+    TypeError: valid must be an integer
+
+Test integer validator with list:
+    >>> bg.integer_validator("measure", [1])
+    Traceback (most recent call last):
+    TypeError: measure must be an integer
+
+Test integer validator with empty tuple:
+    >>> bg.integer_validator("measure", ())
+    Traceback (most recent call last):
+    TypeError: measure must be an integer
+
+Test integer validator with tuple:
+    >>> bg.integer_validator("measure", (1,))
+    Traceback (most recent call last):
+    TypeError: measure must be an integer
+
+Test integer validator with set:
+    >>> bg.integer_validator("measure", {3, 4})
+    Traceback (most recent call last):
+    TypeError: measure must be an integer
+
+Test integer validator with missing arguments:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test integer validator with missing value:
+    >>> bg.integer_validator("age")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Test integer validator with extra argument:
+    >>> bg.integer_validator("age", 1, 2)
+    Traceback (most recent call last):
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
