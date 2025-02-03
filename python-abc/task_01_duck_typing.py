@@ -13,12 +13,12 @@ class Shape(ABC):
     Abstract base class for shapes.
     Defines methods that any shape must implement.
     """
-    
+
     @abstractmethod
     def __init__(self):
         """Initialization method for shapes."""
         pass
-    
+
     @abstractmethod
     def area(self):
         """
