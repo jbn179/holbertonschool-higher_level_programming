@@ -104,5 +104,5 @@
   - 🔧 *Description*: Server temporarily unable to handle request
   - *Example*: Server under maintenance or overloaded
 
-## Authors
+## Author
 <li> Benjamin RISTORD - <a href="https://github.com/jbn179">@jbn179</a></li>
