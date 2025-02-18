@@ -6,7 +6,7 @@ import json
 
 class SimpleAPIHandler(BaseHTTPRequestHandler):
     """Handler for the HTTP requests"""
-    
+
     def _send_json_response(self, data, status_code=200):
         """Helper method to send JSON responses"""
         self.send_response(status_code)
@@ -27,7 +27,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         if self.path == '/':
             # Route racine - renvoie le message de base
             self._send_text_response("Hello, this is a simple API!")
-        
+
         elif self.path == '/data':
             # Route /data - renvoie les données JSON
             sample_data = {
@@ -36,7 +36,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
                 "city": "New York"
             }
             self._send_json_response(sample_data)
-        
+
         elif self.path == '/status':
             # Route /status - renvoie "OK"
             self._send_text_response("OK")
