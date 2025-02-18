@@ -5,16 +5,10 @@ import json
 
 
 class SimpleAPIHandler(BaseHTTPRequestHandler):
-    """Handler for HTTP requests providing basic API endpoints"""
+    """Handler for the HTTP requests"""
     
     def _send_json_response(self, data, status_code=200):
-        """
-        Send a JSON response with the specified status code
-        
-        Args:
-            data: The data to be converted to JSON and sent
-            status_code (int): HTTP status code (default: 200)
-        """
+        """Helper method to send JSON responses"""
         self.send_response(status_code)
         self.send_header('Content-type', 'application/json')
         self.end_headers()
@@ -22,35 +16,20 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         self.wfile.write(response)
 
     def _send_text_response(self, text, status_code=200):
-        """
-        Send a plain text response with the specified status code
-        
-        Args:
-            text (str): The text to be sent
-            status_code (int): HTTP status code (default: 200)
-        """
+        """Helper method to send text responses"""
         self.send_response(status_code)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
         self.wfile.write(text.encode('utf-8'))
 
     def do_GET(self):
-        """
-        Handle GET requests for different endpoints
-        
-        Endpoints:
-            /: Returns a welcome message
-            /data: Returns sample JSON data
-            /status: Returns server status
-            /info: Returns API information
-            Others: Returns 404 error
-        """
+        """Handle GET requests"""
         if self.path == '/':
-            # Root route - returns base message
+            # Route racine - renvoie le message de base
             self._send_text_response("Hello, this is a simple API!")
         
         elif self.path == '/data':
-            # /data route - returns JSON data
+            # Route /data - renvoie les données JSON
             sample_data = {
                 "name": "John",
                 "age": 30,
@@ -59,11 +38,11 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self._send_json_response(sample_data)
         
         elif self.path == '/status':
-            # /status route - returns OK
+            # Route /status - renvoie "OK"
             self._send_text_response("OK")
 
         elif self.path == '/info':
-            # /info route - returns API information
+            # Route /info - renvoie les informations sur l'API
             info_data = {
                 "version": "1.0",
                 "description": "A simple API built with http.server"
@@ -71,7 +50,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self._send_json_response(info_data)
 
         else:
-            # Handle undefined endpoints
+            # Gestion des endpoints non définis
             error_data = {
                 "error": "Endpoint not found",
                 "path": self.path
@@ -80,12 +59,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
 
 
 def run_server(port=8000):
-    """
-    Start the HTTP server on the specified port
-    
-    Args:
-        port (int): Port number to listen on (default: 8000)
-    """
+    """Start the HTTP server"""
     server_address = ('', port)
     httpd = HTTPServer(server_address, SimpleAPIHandler)
     print(f"Server running on port {port}...")
