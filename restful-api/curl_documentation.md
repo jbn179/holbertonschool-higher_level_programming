@@ -148,5 +148,5 @@ Common curl exit codes:
 - `22`: HTTP page not retrieved
 - `35`: SSL connect error
 
-## Authors
+## Author
 <li> Benjamin RISTORD - <a href="https://github.com/jbn179">@jbn179</a></li>
