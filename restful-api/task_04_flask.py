@@ -1,9 +1,10 @@
+#!/usr/bin/python3
+
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {"jane": {"username": "jane", "name": "Jane",
-                  "age": 28, "city": "Los Angeles"}}
+users = {}
 
 
 @app.route("/")
@@ -12,7 +13,7 @@ def home():
 
 
 @app.route("/data")
-def get_users():
+def data():
     return jsonify(list(users.keys()))
 
 
