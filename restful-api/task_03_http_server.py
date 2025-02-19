@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+
 """Simple HTTP server implementation using http.server module"""
+
 import json
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
 
-# Define the request handler class
+"""Define the request handler class"""
+
+
 class SimpleAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Define the / endpoint
@@ -48,7 +52,9 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(error_message).encode("utf-8"))
 
 
-# Function to run the server
+"""Function to run the server"""
+
+
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
     server_address = ("", port)
     httpd = server_class(server_address, handler_class)
@@ -56,6 +62,6 @@ def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
     httpd.serve_forever()
 
 
-# Entry point
+"""Entry point"""
 if __name__ == "__main__":
     run()
