@@ -3,7 +3,7 @@ from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_jwt_extended import (
     JWTManager, create_access_token, get_jwt_identity,
-    jwt_required, verify_jwt_in_request, get_jwt
+    jwt_required, verify_jwt_in_request
 )
 from functools import wraps
 
@@ -32,8 +32,8 @@ users = {
 # Basic auth verification
 @auth.verify_password
 def verify_password(username, password):
-    if username in users and check_password_hash(
-            users[username]['password'], password):
+    if username in users and \
+       check_password_hash(users[username]['password'], password):
         return username
     return None
 
@@ -94,8 +94,8 @@ def login():
     if not username or not password:
         return jsonify({"error": "Missing username or password"}), 401
 
-    if username in users and check_password_hash(
-            users[username]['password'], password):
+    if username in users and \
+       check_password_hash(users[username]['password'], password):
         access_token = create_access_token(identity=username)
         return jsonify({"access_token": access_token})
 
@@ -115,4 +115,4 @@ def admin_only():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
