@@ -27,13 +27,13 @@ if __name__ == "__main__":
     cursor = db.cursor()
 
     # Execute SELECT query
-    cursor.execute("SELECT * FROM states ORDER BY states.id")
+    cursor.execute("""
+        SELECT * FROM states
+        ORDER BY states.id
+    """)
 
-    # Fetch all rows
-    rows = cursor.fetchall()
-
-    # Print results
-    for row in rows:
+    # Fetch and print results
+    for row in cursor.fetchall():
         print(row)
 
     # Close cursor and database connection
