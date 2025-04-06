@@ -1,136 +1,130 @@
 # 📚 Holberton School Higher Level Programming
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
-![Progress](https://img.shields.io/badge/Progress-Intermediate-yellow.svg)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow.svg)
+![SQL](https://img.shields.io/badge/SQL-MySQL-orange.svg)
+![Progress](https://img.shields.io/badge/Progress-Advanced-green.svg)
 
 ## 📖 Description
-This repository contains a collection of Python scripts and programs developed as part of the Holberton School Higher Level Programming curriculum. The goal is to provide a comprehensive understanding of various programming concepts and techniques using Python. Each directory within this repository focuses on a specific topic or project, designed to build and enhance your programming skills.
+This repository contains a collection of projects developed as part of the Holberton School Higher Level Programming curriculum. The projects cover various programming languages and concepts with a primary focus on Python, along with JavaScript, SQL, and web development. Each directory represents a specific topic or project designed to build and enhance programming skills from foundational to advanced levels.
 
 The projects cover a range of topics, including:
-- Basic syntax and data structures
-- Control flow and functions
-- Importing and using modules
-- Error handling and exceptions
+- Python fundamentals and advanced concepts
 - Object-oriented programming
-- Advanced data structures and algorithms
+- Data structures and algorithms
+- Database manipulation with SQL
+- Web front-end with JavaScript
+- REST API development
+- Object-relational mapping
+- Test-driven development
 
 ## 📂 Contents
-- **python-hello_world**: Introduction to Python programming.
-- **python-if_else_loops_functions**: Control flow and functions.
-- **python-import_modules**: Importing and using modules.
-- **python-data_structures**: Basic data structures.
-- **python-more_data_structures**: Advanced data structures.
-- **python-exceptions**: Error handling and exceptions.
-- **python-test_driven_development**: Writing and running tests.
+
+### Python Projects
+- **python-hello_world**: Introduction to Python programming basics.
+- **python-if_else_loops_functions**: Control flow, loops, and function definitions.
+- **python-import_modules**: Importing and utilizing modules in Python.
+- **python-data_structures**: Lists, tuples, and basic data structures.
+- **python-more_data_structures**: Dictionaries, sets, and functional programming concepts.
+- **python-exceptions**: Error handling and exception management.
+- **python-classes**: Object-oriented programming in Python.
+- **python-more_classes**: Advanced OOP concepts and class implementations.
+- **python-test_driven_development**: Writing and running tests in Python.
+- **python-inheritance**: Class inheritance and object hierarchies.
+- **python-input_output**: File handling, JSON serialization, and deserialization.
+- **python-serialization**: Converting objects to different formats (JSON, Pickle, CSV, XML).
+- **python-object_relational_mapping**: Using SQLAlchemy to map Python classes to database tables.
+- **python-server_side_rendering**: Server-side template rendering techniques.
+
+### Web Development
+- **javascript-dom_manipulation**: JavaScript DOM manipulation and web interactivity.
+- **restful-api**: Building and consuming RESTful APIs.
+
+### Database Projects
+- **SQL_introduction**: Introduction to SQL and database concepts.
+- **SQL_more_queries**: Advanced SQL queries, joins, and database management.
 
 ## 🚀 Getting Started
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/holbertonschool-higher_level_programming.git
+   git clone https://github.com/jbn179/holbertonschool-higher_level_programming.git
    ```
-2. Navigate to the desired directory:
+2. Navigate to the desired project directory:
    ```bash
    cd holbertonschool-higher_level_programming/python-hello_world
    ```
-3. Run the scripts:
+3. Run the scripts according to the project's requirements:
    ```bash
    python3 2-print.py
    ```
 
 ## 🛠️ Requirements
-• Python 3.8+  
-• Linux or macOS environment (recommended)
+- Python 3.8+
+- MySQL 8.0+ (for SQL projects)
+- Node.js (for JavaScript projects)
+- Ubuntu 20.04 LTS (recommended)
 
 ## Examples
 
-### python-hello_world
-Prints a string to stdout:
+### Python Classes
 ```python
-print("Programming is like building a multilingual puzzle")
-# Output: Programming is like building a multilingual puzzle
+#!/usr/bin/python3
+"""Define a class Square"""
+
+class Square:
+    """Represent a square."""
+
+    def __init__(self, size=0):
+        """Initialize a new Square.
+        
+        Args:
+            size (int): The size of the new square.
+        """
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
 ```
 
-### python-if_else_loops_functions
-Prints whether a number is positive, negative, or zero:
-```python
-import random
-number = random.randint(-10, 10)
-if number > 0:
-    print(f"{number} is positive")
-elif number == 0:
-    print(f"{number} is zero")
-else:
-    print(f"{number} is negative")
+### JavaScript DOM Manipulation
+```javascript
+// Select an HTML element and modify its content
+document.getElementById('header').textContent = 'New Header Text';
+
+// Add event listeners to elements
+document.querySelector('button').addEventListener('click', function() {
+    alert('Button was clicked!');
+});
 ```
 
-### python-import_modules
-Imports a function from a file and prints the result:
-```python
-from add_0 import add
-a = 1
-b = 2
-print("{} + {} = {}".format(a, b, add(a, b)))
-# Output: 1 + 2 = 3
+### SQL Query
+```sql
+-- Select data with multiple joins
+SELECT cities.id, cities.name, states.name
+FROM cities
+JOIN states ON cities.state_id = states.id
+ORDER BY cities.id ASC;
 ```
 
-### python-data_structures
-Prints all integers of a list:
+### Python Object-Relational Mapping
 ```python
-def print_list_integer(my_list=[]):
-    for i in my_list:
-        print("{:d}".format(i))
+#!/usr/bin/python3
+"""Lists all State objects from the database"""
+from model_state import Base, State
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+import sys
 
-print_list_integer([1, 2, 3, 4, 5])
-# Output:
-# 1
-# 2
-# 3
-# 4
-# 5
-```
-
-### python-more_data_structures
-Computes the square value of all integers of a matrix:
-```python
-def square_matrix_simple(matrix=[]):
-    return [[x ** 2 for x in row] for row in matrix]
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
-print(square_matrix_simple(matrix))
-# Output:
-# [[1, 4, 9], [16, 25, 36], [49, 64, 81]]
-```
-
-### python-exceptions
-Prints x elements of a list:
-```python
-def safe_print_list(my_list=[], x=0):
-    count = 0
-    for i in range(x):
-        try:
-            print(my_list[i], end="")
-            count += 1
-        except IndexError:
-            break
-    print()
-    return count
-
-print(safe_print_list([1, 2, 3, 4, 5], 3))
-# Output:
-# 123
-# 3
-```
-
-### python-test_driven_development
-Adds two integers or floats, returns int:
-```python
-from 0_add_integer import add_integer
-print(add_integer(4.5, 1))  # 5
-print(add_integer(4))       # 102
+if __name__ == "__main__":
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    
+    for state in session.query(State).order_by(State.id).all():
+        print("{}: {}".format(state.id, state.name))
 ```
 
 ## License
